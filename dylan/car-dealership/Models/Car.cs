@@ -2,20 +2,24 @@ namespace Dealership.Models
 {
   public class Car
   {
-    private string MakeModel;
-    private int Price;
-    private int Miles;
+    public string MakeModel { get; set; }
+    public int Price { get; set; }
+    public int Miles { get; set; }
 
     public Car(string makeModel, int price, int miles)
     {
-      MakeModel = makeModel;
-      Price = price;
-      Miles = miles;
+        MakeModel = makeModel;
+        Price = price;
+        Miles = miles;
     }
 
     public bool WorthBuying(int maxPrice)
     {
       return (Price <= maxPrice);
     }
+    public static string MakeSmell(string smell)
+        {
+            return "Our cars smell like " + smell;
+        }
   }
 }
